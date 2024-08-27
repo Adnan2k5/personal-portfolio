@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -11,13 +10,9 @@ import chat from '../assets/chat.png';
 
 export const Projects = () => {
   return (
-    <motion.div
-      id="projects"
-      className="skill-box p-10 justify-around flex flex-col w-full lg:w-[80vw] m-auto"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: false, amount: 0.5 }}
+    <div
+      id="project"
+      className="skill-box p-10 h-screen justify-around flex flex-col w-full lg:w-[80vw] m-auto"
     >
       <div
         className="title text-center flex items-center justify-center mb-6"
@@ -41,7 +36,7 @@ export const Projects = () => {
                 Expense Management
               </Typography>
               <Typography variant="body2" className="text-white text-lg">
-                Tech Used: MERN, JWT, <br/> Material UI, Ant Design, React Icons.
+                Tech Used: MERN, JWT, <br /> Material UI, Ant Design, React Icons.
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -60,7 +55,7 @@ export const Projects = () => {
                 Event Management
               </Typography>
               <Typography variant="body2" className="text-white">
-                Tech Used: MERN, JWT, <br/> Material UI, Ant Design, React Icons.
+                Tech Used: MERN, JWT, <br /> Material UI, Ant Design, React Icons.
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -83,12 +78,12 @@ export const Projects = () => {
                 Chat Application
               </Typography>
               <Typography variant="body2" className="text-white">
-                Tech Used: MERN, JWT, WebSocket <br/> Material UI, Ant Design, React Icons.
+                Tech Used: MERN, JWT, WebSocket <br /> Material UI, Ant Design, React Icons.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </div>
-    </motion.div>
+    </div>
   );
 };
