@@ -40,7 +40,7 @@ export const Skills = () => {
           <div className="card-shine-effect w-full md:w-[40%]">
             <h3 className="title text-center text-2xl md:text-3xl">Competitive Coder</h3>
             <p className="description text-base md:text-lg text-center">
-              C/C++, Java, DSA <br />4 * CodeChef
+              C/C++, Java, DSA <br />4 * HackerRank
             </p>
           </div>
         </div>
