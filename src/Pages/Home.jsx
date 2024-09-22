@@ -1,9 +1,8 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import vector from "../assets/vector.png";
 import { Skills } from "./Skills";
 import { NavBar } from "../Components/NavBar";
-import IconCloud from "@/components/magicui/icon-cloud";
+import IconCloud from "../Components/magicui/icon-cloud";
 import { Projects } from "./projects";
 
 const slugs = [
