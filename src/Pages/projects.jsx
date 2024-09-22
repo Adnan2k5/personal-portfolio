@@ -10,7 +10,7 @@ import chat from "../assets/chat.jpg";
 import { motion } from "framer-motion";
 export const Projects = () => {
   return (
-    <div className="w-[90vw] mt-[22rem] m-auto p-5 ">
+    <div id='project' className="w-[90vw] mt-[22rem] m-auto p-5 ">
       <div className="box flex flex-col justify-center">
         <div className="title">
           <h1 className="tracking-[0.4rem] text-center text-2xl">Projects</h1>
