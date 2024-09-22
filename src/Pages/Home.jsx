@@ -1,54 +1,83 @@
 import React from "react";
-import { Layout } from "../Layout/Layout";
 import Typewriter from "typewriter-effect";
 import vector from "../assets/vector.png";
 import { Skills } from "./Skills";
+import { NavBar } from "../Components/NavBar";
+import IconCloud from "@/components/magicui/icon-cloud";
 import { Projects } from "./projects";
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "android",
+  "html5",
+  "css3",
+  "nodedotjs",
+  "express",
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
+  "postgresql",
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
+  "jest",
+  "cypress",
+  "docker",
+  "git",
+  "jira",
+  "github",
+  "gitlab",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
+  "figma",
+];
 
 export const Home = () => {
   return (
     <div>
-      <Layout>
-        <div
-          id="home"
-          className="home-box  w-screen h-[80vh] mt-[10vh] z-10 flex flex-col lg:flex-row absolute"
-        >
-          <div className="text-side flex items-center text-center mt-[10vh] text-2xl md:text-3xl lg:text-4xl p-5 gap-4 w-full lg:w-[55%]">
-            <div className="text -mt-[5rem] lg:-mt-[11rem] w-full gap-3 ">
-              <h1>
-                Adnan Ashraf, <br />{" "}
+      <div className="container  flex w-[100vw] justify-center m-auto">
+        <div className="navbar">
+          <NavBar />
+        </div>
+        
+        <div id="home" className="home flex  justify-between flex-col md:flex-row w-[90vw] mt-32 md:mt-40  xl:mt-40 p-5 h-[90vh]">
+          <div className="box p-5 h-[50vh] relative flex w-[60vw]">
+            <div className="title flex flex-col justify-center h-[20vh]">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl">Hi,</h1>
+              <h1 className="text-2xl mt-2 md:text-3xl lg:text-4xl">
+                I'm <span className="text-blue-500">Adnan Ashraf</span>
               </h1>
-              <div className="typewriter text-cyan-300">
-                <Typewriter
-                  options={{
-                    strings: ["MERN Stack", "AI/ML", "4 * Hacker Rank"],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
-              <h1 className="text-lg md:text-xl mt-5">
-                B. Tech Cse <br /> KL University
+              <h1 className="text-2xl mt-2 md:text-3xl lg:text-4xl">
+                <span className="text-gray-500">
+                  <Typewriter
+                    options={{
+                      strings: ["MERN STACK DEVELOPER", "AI/ML ENTHUSIAST", "COMPETITIVE CODER"],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </span>
               </h1>
             </div>
           </div>
-          <div className="vector-side relative -ml-0 lg:-ml-[12rem] -z-10 flex justify-center lg:justify-start h-[50vh] lg:h-[80vh] mt-5 lg:mt-0">
-            <img
-              className="w-[100%]  lg:w-full h-full rounded-full object-cover"
-              src={vector}
-              alt="vector"
-            />
+          <div className="box2 lg:mr-32 h-fit ">
+            <IconCloud iconSlugs={slugs}/>
           </div>
         </div>
-
-        <div className="skills mt-[100vh] lg:mt-[90vh]">
-          <Skills />
-        </div>
-
-        <div className="projects  justify-center flex mt-[60vh]">
-          <Projects />
-        </div>
-      </Layout>
+      </div>
+      <div id="skill" className="skills">
+        <Skills />
+      </div>
+      <div id="project" className="projects">
+        <Projects/>
+      </div>
     </div>
   );
 };

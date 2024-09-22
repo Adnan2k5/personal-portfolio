@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link } from 'react-scroll';
-import { SlSocialGithub, SlSocialLinkedin, SlSocialInstagram } from "react-icons/sl";
+import { Link } from "react-scroll";
+import {
+  SlSocialGithub,
+  SlSocialLinkedin,
+  SlSocialInstagram,
+} from "react-icons/sl";
 
 export const NavBar = () => {
   const [activeLink, setLink] = useState("home");
@@ -8,7 +12,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 20) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -21,74 +25,49 @@ export const NavBar = () => {
   const onUpdateLink = (value) => {
     setLink(value);
   };
-
   return (
-    <div className={`nav-container  z-50 p-5  transition-all duration-100 w-screen fixed ${scrolled ? 'bg-black/50 backdrop-blur-md' : 'bg-transparent'} flex justify-between items-center`}>
-      <div className="logo text-sm text-center md:text-2xl">Adnan Ashraf</div>
-      <div className="pages flex-1  md:ml-20">
-        <ul className="flex justify-start gap-5 md:gap-10 text-sm md:text-lg">
-          <li>
-            <Link
-              onClick={() => onUpdateLink("home")}
-              className={`${activeLink === 'home' ? 'border-b-2 border-gray-100' : ""} hover:text-cyan-300 transition-all duration-250`}
-              to="home"
-              smooth={true}
-              duration={500}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => onUpdateLink("skill")}
-              className={`${activeLink === 'skill' ? 'border-b-2 border-gray-100' : ""} hover:text-cyan-300 transition-all duration-250`}
-              to="skills"
-              smooth={true}
-              duration={500}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => onUpdateLink("project")}
-              className={`${activeLink === 'project' ? 'border-b-2 border-gray-100' : ""} hover:text-cyan-300 transition-all duration-250`}
-              to="projects"
-              smooth={true}
-              duration={500}
-            >
-              Projects
-            </Link>
-          </li>
-        </ul>
+    <>
+      <div
+        className={`container justify-between   z-50 p-5 transition-all duration-200 flex items-center fixed w-[90vw] m-auto mt-2 h-[10vh] ${
+          scrolled ? "bg-black backdrop-blur-md" : "bg-transparent"
+        }`}
+      >
+        <div className="logo flex items-center">
+          <h1 className="text-sm md:text-xl lg:text-2xl">Adnan Ashraf</h1>
+        </div>
+        <div className="tabs hidden md:flex">
+          <ul className="flex gap-5 transition-all md:text-xl lg:text-2xl duration-200">
+            <li>
+              <Link className="hover:text-gray-500 transition-all duration-200" to="home">Home</Link>
+            </li>
+            <li>
+              <Link className="hover:text-gray-500 transition-all duration-200" to="skill">Skills</Link>
+            </li>
+            <li>
+              <Link className="hover:text-gray-500 transition-all duration-200" to="project">Project</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="socials flex">
+          <ul className="flex lg:text-3xl gap-5">
+            <li>
+              <a className="hover:text-gray-500 transition-all duration-200" href="#">
+                <SlSocialGithub />
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-gray-500 transition-all duration-200" href="#">
+                <SlSocialInstagram/>
+              </a>
+            </li>
+            <li>
+              <a className="hover:text-gray-500 transition-all duration-200" href="#">
+                <SlSocialLinkedin/>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="social flex gap-5 p-2 justify-center items-center">
-        <a
-          href="https://github.com/Adnan2k5"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[20px] md:w-[25px] transition-all duration-300 hover:text-cyan-300"
-        >
-          <SlSocialGithub className="text-xl md:text-2xl" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/adnan-ashraf-82320b280/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[20px] md:w-[25px] transition-all duration-300 hover:text-cyan-300"
-        >
-          <SlSocialLinkedin className="text-xl md:text-2xl" />
-        </a>
-        <a
-          href="https://instagram.com/a3nan._"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[20px] md:w-[25px] transition-all duration-300 hover:text-cyan-300"
-        >
-          <SlSocialInstagram className="text-xl md:text-2xl" />
-        </a>
-      </div>
-    </div>
+    </>
   );
 };
-

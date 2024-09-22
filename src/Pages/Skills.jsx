@@ -5,17 +5,17 @@ import './home.css';
 export const Skills = () => {
   return (
     <motion.div
-      id="skills"
-      className="w-full h-screen flex items-center justify-center"
+      id="skill"
+      className="w-full h-screen flex items-center  mt-44 justify-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.0 }}
       exit={{ opacity: 0, y: 50 }}
       viewport={{ once: false, amount: 0.5 }}
     >
-      <div  className="skill-box bg-transparent m-auto rounded-lg p-5 w-[90vw] h-[90vh]">
+      <div  className="skill-box bg-transparent m-auto rounded-lg p-5 md:w-[100vw] w-[90vw] h-[90vh]">
         <div className="header flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl w-fit text-center">
+          <h1 className="text-3xl tracking-[0.4rem] md:text-4xl w-fit text-center">
             Skills
           </h1>
         </div>
@@ -40,7 +40,11 @@ export const Skills = () => {
           <div className="card-shine-effect w-full md:w-[40%]">
             <h3 className="title text-center text-2xl md:text-3xl">Competitive Coder</h3>
             <p className="description text-base md:text-lg text-center">
+<<<<<<< HEAD
               C/C++, Java, DSA <br />4 * HackerRank
+=======
+              C/C++, Java, DSA <br />4 * Hackerrank
+>>>>>>> c09a19b (fixed: Mobile View)
             </p>
           </div>
         </div>

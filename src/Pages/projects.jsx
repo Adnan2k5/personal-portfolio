@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,23 +8,15 @@ import expense from "../assets/expense.jpg";
 import event from "../assets/event.png";
 import chat from "../assets/chat.jpg";
 import { motion } from "framer-motion";
-
 export const Projects = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.0 }}
-      exit={{ opacity: 0, y: 50 }}
-      viewport={{ once: false, amount: 0.5}}
-      id="project"
-      className="project p-10 bg-transparent justify-around flex flex-col w-full lg:w-[80vw] "
-    >
-      <div className="title text-center flex items-center justify-center mb-6">
-        <h1 className="text-3xl md:text-4xl w-fit border-grey-100">Projects</h1>
-      </div>
-      <div className="cards h-fit p-4 flex flex-col lg:flex-row justify-around gap-8">
-        <Card className="h-[27rem] w-full lg:w-[22rem]" sx={{ maxWidth: 345 }}>
+    <div className="w-[90vw] mt-[22rem] m-auto p-5 ">
+      <div className="box flex flex-col justify-center">
+        <div className="title">
+          <h1 className="tracking-[0.4rem] text-center text-2xl">Projects</h1>
+        </div>
+        <div className="cards flex flex-col md:flex-row justify-between gap-10 flex-wrap md:flex-nowrap mt-12">
+        <Card className="w-full md:w-1/3" sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -34,7 +26,9 @@ export const Projects = () => {
             />
             <CardContent className="bg-black text-white hover:text-cyan-300 transition-all duration-200">
               <Typography gutterBottom variant="h5" component="div">
-                Expense Management
+                <a href='https://github.com/Adnan2k5/Expense-Management'>
+                  Expense Management
+                </a>
               </Typography>
               <Typography variant="body2" className="text-white text-lg">
                 Tech Used: MERN, JWT, <br /> Material UI, Ant Design, React
@@ -43,45 +37,46 @@ export const Projects = () => {
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card className="h-[27rem] w-full lg:w-[22rem]" sx={{ maxWidth: 345 }}>
+        <Card className="w-full md:w-1/3" sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height=""
               image={event}
-              alt="Event Management"
+              alt="Expense Management"
             />
             <CardContent className="bg-black text-white hover:text-cyan-300 transition-all duration-200">
               <Typography gutterBottom variant="h5" component="div">
-                Event Management
+                <a href='https://github.com/Adnan2k5/Event-Management'>Event Mangement</a>
               </Typography>
-              <Typography variant="body2" className="text-white">
+              <Typography variant="body2" className="text-white text-lg">
                 Tech Used: MERN, JWT, <br /> Material UI, Ant Design, React
                 Icons.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
-        <Card className="h-[27rem] w-full lg:w-[22rem]" sx={{ maxWidth: 345 }}>
+        <Card className="w-full md:w-1/3" sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height=""
               image={chat}
-              alt="Chat Application"
+              alt="Expense Management"
             />
             <CardContent className="bg-black text-white hover:text-cyan-300 transition-all duration-200">
               <Typography gutterBottom variant="h5" component="div">
                 Chat Application
               </Typography>
-              <Typography variant="body2" className="text-white">
-                Tech Used: MERN, JWT, WebSocket <br /> Material UI, Ant Design,
-                React Icons.
+              <Typography variant="body2" className="text-white text-lg">
+                Tech Used: MERN, JWT, <br /> Material UI, Ant Design, React
+                Icons.
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
+        </div>
       </div>
-    </motion.div>
-  );
-};
+    </div>
+  )
+}
