@@ -38,17 +38,17 @@ export const NavBar = () => {
         <div className="socials flex">  
           <ul className="flex lg:text-3xl gap-5">
             <li>
-              <a className="hover:text-gray-500 transition-all duration-200" href="#">
+              <a className="hover:text-gray-500 transition-all duration-200" href="https://github.com/Adnan2k5">
                 <SlSocialGithub />
               </a>
             </li>
             <li>
-              <a className="hover:text-gray-500 transition-all duration-200" href="#">
+              <a className="hover:text-gray-500 transition-all duration-200" href="https://www.instagram.com/a3nan._">
                 <SlSocialInstagram/>
               </a>
             </li>
             <li>
-              <a className="hover:text-gray-500 transition-all duration-200" href="#">
+              <a className="hover:text-gray-500 transition-all duration-200" href="https://www.linkedin.com/in/adnan-ashraf-82320b280/">
                 <SlSocialLinkedin/>
               </a>
             </li>
